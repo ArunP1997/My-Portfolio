@@ -1,9 +1,20 @@
 import { useState, useEffect } from 'react';
 
 function Projects() {
-  const project1Images = ["/images/meateat.png", "/images/settings.png"];
-  const project2Images = ["/images/home.png", "/images/room.png", "/images/login.png"];
-  const project3Images = ["/images/menu.png", "/images/classes.png"];
+  // Prefix image paths with PUBLIC_URL for GitHub Pages
+  const project1Images = [
+    process.env.PUBLIC_URL + "/images/meateat.png",
+    process.env.PUBLIC_URL + "/images/settings.png"
+  ];
+  const project2Images = [
+    process.env.PUBLIC_URL + "/images/home.png",
+    process.env.PUBLIC_URL + "/images/room.png",
+    process.env.PUBLIC_URL + "/images/login.png"
+  ];
+  const project3Images = [
+    process.env.PUBLIC_URL + "/images/menu.png",
+    process.env.PUBLIC_URL + "/images/classes.png"
+  ];
 
   const [currentIndex1, setCurrentIndex1] = useState(0);
   const [currentIndex2, setCurrentIndex2] = useState(0);
@@ -91,11 +102,10 @@ function Projects() {
       {/* Modal Overlay */}
       {activeProject && (
         <div className="modal-overlay fixed top-0 left-0 w-full h-full backdrop-blur-sm bg-black bg-opacity-60 flex items-center justify-center z-50" onClick={() => setActiveProject(null)}>
-            <div
-              className="modal-content bg-white p-6 rounded-md max-w-5xl w-full max-h-[95vh] overflow-y-auto relative"
-              onClick={(e) => e.stopPropagation()}
-            >
-
+          <div
+            className="modal-content bg-white p-6 rounded-md max-w-5xl w-full max-h-[95vh] overflow-y-auto relative"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button onClick={() => setActiveProject(null)} className="absolute top-2 right-4 text-gray-600 text-2xl hover:text-black">✕</button>
             <h2 className="text-xl font-semibold mb-3">{activeProject.title}</h2>
 
