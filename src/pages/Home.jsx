@@ -3,23 +3,24 @@ import { useState } from "react";
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const skillsData = [
-    {
-      title: "Technical Skills",
-      image: "/images/skills.jpg",
-      items: ["Python", "C++", "Java", "JavaScript", "PyTorch", "CUDA", "QLoRA", "Machine Learning", "Deep Learning", "Computer Vision"]
-    },
-    {
-      title: "Frameworks & Tools",
-      image: "/images/framework.png",
-      items: ["React.js", "Vue.js", "Flask", "REST APIs", "Figma", "SQL Databases", "MongoDB","Docker", "Git"]
-    },
-    {
-      title: "Languages & More",
-      image: "/images/language.jpg",
-      items: ["English (Fluent)", "German (Basics)", "Agile Methodologies", "Team Leadership", "Problem Solving"]
-    }
-  ];
+    const skillsData = [
+      {
+        title: "Technical Skills",
+        image: process.env.PUBLIC_URL + "/images/skills.jpg",
+        items: ["Python", "C++", "Java", "JavaScript", "PyTorch", "CUDA", "QLoRA", "Machine Learning", "Deep Learning", "Computer Vision"]
+      },
+      {
+        title: "Frameworks & Tools",
+        image: process.env.PUBLIC_URL + "/images/framework.png",
+        items: ["React.js", "Vue.js", "Flask", "REST APIs", "Figma", "SQL Databases", "MongoDB", "Docker", "Git"]
+      },
+      {
+        title: "Languages & More",
+        image: process.env.PUBLIC_URL + "/images/language.jpg",
+        items: ["English (Fluent)", "German (Basics)", "Agile Methodologies", "Team Leadership", "Problem Solving"]
+      }
+    ];
+
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % skillsData.length);
