@@ -37,7 +37,7 @@ function Home() {
         {/* Main Text Content */}
         <div className="text-content-container text-left w-full pl-20 pr-5">
           <p className="summary">
-            I'm <strong>Arun Prasad Muralidharan</strong>, an AI Engineer and Python Web Developer with 3.5+ years of experience building deep learning systems and full-stack applications. I specialize in training large-scale vision-language models (VLMs) using PyTorch, Hugging Face, and QLoRA.  Previously a QA Engineer, I've gained strong experience in Agile workflows, testing. I'm passionate about building intelligent, user-focused AI interfaces.
+            I'm <strong>Arun Prasad Muralidharan</strong>, a QA Engineer with over 3.5 years of experience ensuring the quality and performance of web, Android, and iOS applications. I’ve worked extensively on regression, smoke, and exploratory testing within Agile environments, contributing to the delivery of stable and user-friendly digital products. My background has given me a strong eye for usability and interface consistency, which fuels my growing interest in UI/UX design and frontend development. Alongside my QA expertise, I also specialize in training vision-language and large language models (VLMs/LLMs) using PyTorch, Hugging Face, and QLoRA.
           </p>
         </div>
 
